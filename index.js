@@ -1,13 +1,33 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  // n steps
+  for (let i = 0; i < array.length; i++) {
+
+    let subtractNumber = target - array[i]
+    // n steps
+     for (let j = i + 1; j < array.length; j++) {
+
+        if (array[j] === subtractNumber){
+          return true
+        }
+    }
+  }  
+  return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  0(n^2)
 */
 
 /* 
   Add your pseudocode here
+
+  Create two for-loops
+  One for-loop to iterate through the array
+  Another for-loop to iterate through the array without the number you are going to compare to
+
 */
 
 /*
